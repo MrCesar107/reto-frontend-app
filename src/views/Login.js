@@ -4,6 +4,9 @@ import AppStore from '../stores/AppStore';
 import Actions from '../actions/Actions';
 import { Redirect } from 'react-router-dom';
 
+//Components
+import Message from '../components/Message'
+
 import logo from '../logo-jetty.png';
 
 import '../stylesheets/Login.css';
@@ -52,7 +55,9 @@ class Login extends Reflux.Component {
           :
           <div className="Login-box">
             <img className="Login-image" src={logo} />
-            <p className="Login-slogan">Buen Viaje. Siempre</p>
+
+            <Message mensaje={this.state.user_data.message}/>
+
             <form className="Login-form" onSubmit={this.onSubmit}>
               <div className="Login-box-input">
                 <input className="Login-email-input" type="email" value={this.state.email} required

@@ -40,3 +40,11 @@
 .Navbar-logo-img {
   width: 35%;
 }
+
+@media (max-width: 767px) {
+  .mb-d { display: none; }
+
+  .Navbar-nav { padding: 0px; }
+
+  .Navbar-logo-img { width: 45%; }
+}

@@ -27,6 +27,9 @@ class AppStore extends Reflux.Store {
         self.setState({ user_data: response });
         self.setState({ isLogged: true });
       }
+      else {
+        self.setState({ user_data: response });
+      }
 
     });
   }
