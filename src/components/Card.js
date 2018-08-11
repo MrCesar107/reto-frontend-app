@@ -11,7 +11,6 @@ class Card extends Component {
   render() {
     return(
       <div className="Card">
-        <p className="Card-text">{ this.props.dates }</p>
         <p className="Card-text Card-text-subtitle">{ this.props.name }</p>
         <p className="Card-text">Horario de salida</p>
         <p className="Card-text Card-text-subtitle">{ this.props.time }</p>
@@ -24,10 +23,8 @@ class Card extends Component {
 }
 
 Card.propTypes = {
-  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
-  dates: PropTypes.string.isRequired,
   trip_stops_start: PropTypes.string.isRequired,
   trip_stops_end: PropTypes.string.isRequired
 }

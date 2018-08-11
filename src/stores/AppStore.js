@@ -21,11 +21,7 @@ class AppStore extends Reflux.Store {
   login(objeto) {
     const self = this;
 
-    //console.log(objeto);
-
     HTTP.post('https://jettymx-st.herokuapp.com/api/drivers/session', objeto).then((response) => {
-
-      //console.log(response);
 
       if(response !== "undefined" && response.auth_token !== "") {
         self.setState({ user_data: response });
@@ -35,9 +31,13 @@ class AppStore extends Reflux.Store {
     });
   }
 
-  getViajes(objeto) {
+  logout() {
+    const self = this;
 
-    //console.log(objeto);
+    self.setState({ isLogged: false });
+  }
+
+  getViajes(objeto) {
 
     let fechas = [];
 

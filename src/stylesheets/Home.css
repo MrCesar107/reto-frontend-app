@@ -21,3 +21,14 @@
   display: block;
   margin: 10px auto;
 }
+
+.Home-fecha {
+  width: 100%;
+  padding: 7px;
+  margin: 0px auto;
+  background-color: #4592e7;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+}

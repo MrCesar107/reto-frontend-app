@@ -1,7 +1,6 @@
 import Fecth from 'whatwg-fetch';
 
 export function get(url, object) {
-  console.log(object);
   return fetch(url, {
     method: 'GET',
     headers: {
