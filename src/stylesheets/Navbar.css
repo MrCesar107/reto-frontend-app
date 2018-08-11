@@ -1,0 +1,42 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+.Navbar {
+  width: 100%;
+  height: auto;
+  background-color: #4fbca7;
+  padding: 20px 0px;
+}
+
+.Navbar-nav {
+  display: flex;
+  margin: 0px 30px;
+}
+
+.Navbar-nav .Navbar-nav-item {
+  margin: auto 20px;
+  list-style-type: none !important;
+}
+
+.Navbar-nav-item:nth-child(1) {
+  margin-right: auto;
+}
+
+.Navbar-nav-link {
+  text-decoration: none !important;
+  color: #fff !important;
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.Navbar-logo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+
+.Navbar-logo-img {
+  width: 35%;
+}

@@ -1,0 +1,23 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.Home {
+
+}
+
+.Home-titulo {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: #838383;
+  border-bottom: 2px solid #d8d8d8;
+  padding-bottom: 25px;
+}
+
+.Home-container {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
