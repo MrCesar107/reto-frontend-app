@@ -7,7 +7,15 @@
 }
 
 .Message-text {
-  color: #721c24;
+  color: #4FBCA7;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.danger {
+
   font-size: 1.1em;
   text-align: center;
   font-weight: bold;

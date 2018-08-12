@@ -3,7 +3,8 @@ import Reflux from 'reflux';
 const Actions = Reflux.createActions([
   'login',
   'logout',
-  'getViajes'
+  'getViajes',
+  'loading'
 ]);
 
 export default Actions;

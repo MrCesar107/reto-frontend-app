@@ -3,13 +3,15 @@ import Reflux from 'reflux';
 import AppStore from '../stores/AppStore';
 import Actions from '../actions/Actions';
 import { Redirect } from 'react-router-dom';
+import { PacmanLoader } from 'react-spinners';
 
 //Components
-import Message from '../components/Message'
+import Message from '../components/Message';
 
 import logo from '../logo-jetty.png';
 
 import '../stylesheets/Login.css';
+import '../stylesheets/Message.css';
 
 class Login extends Reflux.Component {
   constructor(props) {
@@ -18,19 +20,23 @@ class Login extends Reflux.Component {
     this.state = {};
 
     this.store = AppStore;
-    this.storeKeys = ['email', 'password', 'isLogged', 'auth', 'user_data'];
+    this.storeKeys = ['email', 'password', 'loading', 'isLogged', 'auth', 'user_data'];
     this.login = this.login.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
 
   onSubmit(e) {
     e.preventDefault();
-    this.login();
+    this.setState({ user_data: [] });
+    this.setState({ loading: true });
+
+
     if(this.state.email !== "" && this.state.password !== "") {
 
       setTimeout(() => {
+        this.login();
         this.setState({email: '', password: ''});
-      }, 600);
+      }, 200);
 
     } else {
       alert("Por favor, escriba su correo y contraseña para iniciar sesión");
@@ -48,7 +54,14 @@ class Login extends Reflux.Component {
 
   render() {
 
+
+
+    console.log(this.state.user_data.message);
+
+
+
     return(
+
       <div className="Login">
         { this.state.isLogged ?
           <Redirect to="/home/"/>
@@ -57,6 +70,19 @@ class Login extends Reflux.Component {
             <img className="Login-image" src={logo} />
 
             <Message mensaje={this.state.user_data.message}/>
+
+            {
+
+              this.state.loading && this.state.user_data.message !== "Usuario o contraseña incorrectos"  ?
+                <React.Fragment>
+                  <Message mensaje={"Cargando"}/>
+                  <PacmanLoader className='' size-unit={"px"} size={10} color={'#4FBCA7'} />
+                </React.Fragment>
+              :
+                <br/>
+            }
+
+
 
             <form className="Login-form" onSubmit={this.onSubmit}>
               <div className="Login-box-input">

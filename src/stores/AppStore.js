@@ -11,6 +11,7 @@ class AppStore extends Reflux.Store {
       password: '',
       isLogged: false,
       logged: false,
+      loading: false,
       auth: {},
       user_data: [],
       data_viajes: [],
@@ -73,6 +74,10 @@ class AppStore extends Reflux.Store {
         this.setState({ fechas_viajes: fechas });
       }
     });
+  }
+
+  loading() {
+
   }
 }
 
