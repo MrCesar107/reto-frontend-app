@@ -1,0 +1,36 @@
+[33mcommit 5431d2075fbebc4e236e10852d5cb3411846edd0[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Merge: e7260a4 067651e
+Author: Cesar Rodriguez <cesar.rodriguez.lara54@gmail.com>
+Date:   Sun Aug 12 19:30:17 2018 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit e7260a471a5fbe08663dbed839fb6c6d661c4831[m
+Author: Cesar Rodriguez <cesar.rodriguez.lara54@gmail.com>
+Date:   Sun Aug 12 19:28:43 2018 -0500
+
+    Primer commit
+
+[33mcommit 067651e3d0633bb905f93103531a48573403acc1[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Cesar Rodriguez <cesar.rodriguez.lara54@gmail.com>
+Date:   Sun Aug 12 01:46:47 2018 -0500
+
+    Se ha agregado el elemento de 'cargando' a la pantalla de login y se han corregido varios bugs
+
+[33mcommit 9a2deeaacd02ad3bb67f8f1efc5a11363385d344[m
+Author: Cesar Rodriguez <cesar.rodriguez.lara54@gmail.com>
+Date:   Sat Aug 11 17:09:48 2018 -0500
+
+    Se han corregido aspectos del front
+
+[33mcommit 87953ca2489fd4d06e8e0c9317e3ceb01f038eb8[m
+Author: Cesar Rodriguez <cesar.rodriguez.lara54@gmail.com>
+Date:   Sat Aug 11 15:18:55 2018 -0500
+
+    Se han arreglado varios bugs en la aplicacion y se ha mejorado el front
+
+[33mcommit ed201e89f6935020f6c0b603846bad1e0fac9bf1[m
+Author: Cesar Rodriguez <cesar.rodriguez.lara54@gmail.com>
+Date:   Sat Aug 11 01:08:43 2018 -0500
+
+    Primer commit del proyecto Jetty. Esta version cumple con las especificaciones iniciales del proyecto
