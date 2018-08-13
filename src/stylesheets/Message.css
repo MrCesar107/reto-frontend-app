@@ -1,0 +1,23 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.Message {
+  width: 100%;
+  padding: 5px;
+}
+
+.Message-text {
+  color: #4FBCA7;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.danger {
+
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
