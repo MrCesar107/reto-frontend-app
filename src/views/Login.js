@@ -54,12 +54,6 @@ class Login extends Reflux.Component {
 
   render() {
 
-
-
-    console.log(this.state.user_data.message);
-
-
-
     return(
 
       <div className="Login">

@@ -15,7 +15,8 @@ class AppStore extends Reflux.Store {
       auth: {},
       user_data: [],
       data_viajes: [],
-      fechas_viajes: []
+      fechas_viajes: [],
+      dates: []
     }
   }
 

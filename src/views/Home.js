@@ -18,7 +18,7 @@ class Home extends Reflux.Component {
 
     this.state = {}
     this.store = AppStore;
-    this.storeKeys = ['isLogged', 'logged', 'user_data', 'data_viajes', 'fechas_viajes', 'i'];
+    this.storeKeys = ['isLogged', 'logged', 'user_data', 'data_viajes', 'fechas_viajes', 'dates'];
     this.getViajes = this.getViajes.bind(this);
     this.getFecha = this.getFecha.bind(this);
   }
@@ -69,7 +69,10 @@ class Home extends Reflux.Component {
 
     let dates = [new Date(this.state.fechas_viajes[0]), new Date(this.state.fechas_viajes[1])
                   , new Date(this.state.fechas_viajes[2]), new Date(this.state.fechas_viajes[3])
-                  , new Date(this.state.fechas_viajes[4]), new Date(this.state.fechas_viajes[5])];
+                  , new Date(this.state.fechas_viajes[4]), new Date(this.state.fechas_viajes[5])
+                  , new Date(this.state.fechas_viajes[6]), new Date(this.state.fechas_viajes[7])
+                  , new Date(this.state.fechas_viajes[8])];
+
 
     let viajes = this.state.data_viajes.map((currentValue, index, array) => {
 
@@ -137,6 +140,41 @@ class Home extends Reflux.Component {
 
     });
 
+    let viajes7 = this.state.data_viajes.map((currentValue, index, array) => {
+
+      if(currentValue.date === this.state.fechas_viajes[6]) {
+        return(
+          <Card key={index}  name={currentValue.name} dates={currentValue.date} time={currentValue.time} trip_stops_start={currentValue.trip_stops[0].address}
+            trip_stops_end={currentValue.trip_stops[currentValue.trip_stops.length - 1].address}/>
+        );
+      }
+
+    });
+
+    let viajes8 = this.state.data_viajes.map((currentValue, index, array) => {
+
+      if(currentValue.date === this.state.fechas_viajes[7]) {
+        return(
+          <Card key={index}  name={currentValue.name} dates={currentValue.date} time={currentValue.time} trip_stops_start={currentValue.trip_stops[0].address}
+            trip_stops_end={currentValue.trip_stops[currentValue.trip_stops.length - 1].address}/>
+        );
+      }
+
+    });
+
+    let viajes9 = this.state.data_viajes.map((currentValue, index, array) => {
+
+      if(currentValue.date === this.state.fechas_viajes[8]) {
+        return(
+          <Card key={index}  name={currentValue.name} dates={currentValue.date} time={currentValue.time} trip_stops_start={currentValue.trip_stops[0].address}
+            trip_stops_end={currentValue.trip_stops[currentValue.trip_stops.length - 1].address}/>
+        );
+      }
+
+    });
+
+
+
     return(
       <div className="Home">
         { this.state.isLogged ?
@@ -156,6 +194,12 @@ class Home extends Reflux.Component {
               { viajes5 }
               <p className="Home-fecha">{ this.getFecha(dates[5]) }</p>
               { viajes6 }
+              <p className="Home-fecha">{ this.getFecha(dates[6]) }</p>
+              { viajes7 }
+              <p className="Home-fecha">{ this.getFecha(dates[7]) }</p>
+              { viajes8 }
+              <p className="Home-fecha">{ this.getFecha(dates[8]) }</p>
+              { viajes9 }
             </div>
           </React.Fragment>
           :
